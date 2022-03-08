@@ -114,7 +114,7 @@ export async function run() {
         core.info(await execShellCommand('bash -c "upterm session current --admin-socket ~/.upterm/*.sock"'));
       } catch (error) {
         core.info(error.message);
-        break
+        //break
       }
 
       const skip = fs.existsSync("/continue") || fs.existsSync(path.join(process.env.GITHUB_WORKSPACE, "continue"))
